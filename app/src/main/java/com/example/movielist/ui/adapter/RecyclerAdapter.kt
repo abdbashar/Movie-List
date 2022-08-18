@@ -41,7 +41,6 @@ class RecyclerAdapter(
             movieReleaseDate.text = movieData.elementAt(position).year
             Glide.with(holder.itemView)
                 .load("${Constant.IMAGE_BASE_URL}${movieData.elementAt(position).posterPath}")
-                .placeholder(R.drawable.grey_man)
                 .into(moviePoster)
             holder.itemView.setOnClickListener { listener.onClick(movieData[position]) }
 
